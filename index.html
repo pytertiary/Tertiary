@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="Discover products and updates from Tertiary, an independent mini-business.">
+  <meta property="og:title" content="Tertiary — Small business. Big ideas.">
+  <meta property="og:description" content="Discover what’s new from Tertiary.">
+  <meta property="og:type" content="website">
+  <title>Tertiary | Products & More</title>
+  <style>
+    :root{--bg:#f7f5f0;--ink:#20202a;--muted:#686873;--purple:#7352cd;--lav:#e5dcfa;--border:#e6e2da;--white:#fff;--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}img{max-width:100%}::selection{background:#ded0fa}
+    .container{width:min(1160px,calc(100% - 44px));margin-inline:auto}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #ddd4f4;background:#f0eafa;color:#5c45a0;border-radius:100px;padding:7px 15px;font-size:12px;font-weight:800;letter-spacing:.035em}
+    .announcement{background:#26213b;color:#f5efff;text-align:center;font-size:12px;letter-spacing:.09em;font-weight:700;padding:9px 14px}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,245,240,.94);border-bottom:1px solid var(--border);backdrop-filter:blur(16px)}
+    .nav{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .brand{font-size:27px;letter-spacing:-1.5px;font-weight:900;display:inline-flex;align-items:center;gap:12px;line-height:1}
+    .mark{width:36px;height:36px;display:grid;place-items:center;background:var(--purple);color:white;border-radius:12px;transform:rotate(-8deg);font-weight:900;letter-spacing:-1px;font-size:21px}
+    nav{display:flex;align-items:center;gap:32px}nav a{font-size:14px;font-weight:700;color:#53505c;transition:color .2s}nav a:hover{color:var(--purple)}
+    .nav-link{border:1px solid var(--ink);border-radius:100px;padding:10px 20px;color:var(--ink)}
+    .hero{padding:92px 0 100px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+    .hero h1{font-size:clamp(58px,7.5vw,105px);line-height:.99;letter-spacing:-.075em;margin:23px 0 26px;max-width:700px;font-weight:850}
+    .hero h1 em{color:var(--purple);font-family:Georgia,"Times New Roman",serif;font-weight:400}
+    .hero p{font-size:18px;color:var(--muted);max-width:525px;margin:0 0 30px;line-height:1.8}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.button{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:15px 23px;border-radius:100px;border:1px solid var(--ink);font-size:14px;font-weight:800;transition:transform .2s,background .2s,color .2s;white-space:nowrap}.button:hover{transform:translateY(-3px)}.button.primary{background:var(--ink);color:white}.button.secondary{background:transparent;color:var(--ink)}
+    .hero-art{min-height:450px;position:relative;isolation:isolate;display:grid;place-items:center}
+    .hero-art:before{content:"";position:absolute;inset:25px 5px 20px 25px;background:#ded1f5;border-radius:43% 57% 55% 45% / 46% 44% 56% 54%;transform:rotate(-13deg);z-index:-1}
+    .art-card{width:min(350px,90%);aspect-ratio:4/4.5;background:#fff;border:1px solid rgba(50,40,88,.13);border-radius:22px;box-shadow:22px 25px 0 rgba(96,70,164,.13),0 30px 60px rgba(49,38,88,.12);transform:rotate(7deg);padding:24px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+    .art-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:900;letter-spacing:.12em}.art-circle{border:1.5px solid #332a52;border-radius:100%;width:31px;height:31px;display:grid;place-items:center;font-size:18px}
+    .art-shapes{height:210px;position:relative;display:flex;align-items:center;justify-content:center}.shape-a{position:absolute;width:155px;height:155px;background:#7756cc;border-radius:28px;transform:rotate(-23deg)}.shape-b{position:absolute;width:136px;height:136px;border:25px solid #d9c9fb;border-radius:100%;transform:translate(47px,-15px)}.shape-c{position:absolute;width:125px;height:125px;background:#f2d48b;border-radius:100% 20% 60% 20%;transform:translate(-30px,52px) rotate(25deg);mix-blend-mode:multiply}
+    .art-bottom strong{display:block;font-size:35px;line-height:1.1;letter-spacing:-.06em}.art-bottom span{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+    .sparkle{position:absolute;font-size:34px;color:#6450ae;top:30px;right:25px}.orbit{position:absolute;bottom:30px;left:-5px;background:white;border:1px solid #e1d7f7;box-shadow:0 12px 30px rgba(48,30,70,.08);border-radius:100px;padding:12px 20px;font-size:13px;font-weight:800;transform:rotate(-8deg)}
+    section{scroll-margin-top:115px}.shop{padding:80px 0 100px;border-top:1px solid var(--border)}.section-top{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:35px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--purple);font-weight:900;margin:0 0 12px}.section-title{font-size:clamp(39px,5vw,60px);line-height:1.1;letter-spacing:-.065em;margin:0}.section-desc{max-width:360px;color:var(--muted);margin:0 0 4px;font-size:15px}
+    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px;flex-wrap:wrap}.filters{display:flex;flex-wrap:wrap;gap:8px}.filter{background:transparent;color:#56535e;border:1px solid #dcd8d2;border-radius:100px;padding:8px 18px;font-size:13px;font-weight:800}.filter[aria-pressed=true]{background:var(--ink);color:white;border-color:var(--ink)}.search{padding:10px 15px;border-radius:100px;border:1px solid var(--border);background:#fff;min-width:210px;outline-offset:3px}
+    .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product{background:#fff;border:1px solid var(--border);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}.product-media{aspect-ratio:1.15;background:#eee8fa;display:grid;place-items:center;overflow:hidden;position:relative}.product-media img{width:100%;height:100%;object-fit:cover}.product-fallback{font:800 80px Georgia,serif;color:rgba(91,67,155,.4)}.product-tag{position:absolute;left:16px;top:16px;background:#fff;padding:5px 12px;border-radius:100px;font-weight:800;font-size:11px}.product-info{padding:22px;display:flex;flex:1;flex-direction:column}.product-info h3{margin:0 0 5px;font-size:21px;letter-spacing:-.03em}.product-info p{font-size:14px;color:var(--muted);margin:0 0 16px}.product-bottom{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:auto}.price{font-weight:900;font-size:18px}.product-bottom a{font-size:13px;font-weight:900;border-bottom:2px solid var(--purple);padding-bottom:2px}.no-results{grid-column:1/-1;padding:35px;color:var(--muted);text-align:center}
+    .empty{border:1px dashed #bfb5d9;border-radius:26px;background:linear-gradient(135deg,#f1eafa,#faf8f4);padding:55px 26px;display:grid;place-items:center;text-align:center;gap:8px}.empty .empty-icon{width:62px;height:62px;background:white;border-radius:19px;display:grid;place-items:center;font-size:28px;box-shadow:0 12px 30px #e0d8ef}.empty h3{font-size:27px;letter-spacing:-.04em;margin:12px 0 0}.empty p{color:var(--muted);max-width:430px;margin:0}
+    .about{background:#26213b;color:#fff;padding:90px 0}.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}.about .eyebrow{color:#bfaaf2}.about .section-title{max-width:460px}.about p{color:#cec8df;font-size:17px;line-height:1.9}.about-stamp{display:inline-block;border:1px solid #6f648c;border-radius:100px;padding:9px 16px;font-size:13px;font-weight:800;margin-top:10px}
+    .contact{padding:100px 0}.contact-panel{background:#e4dafa;border-radius:34px;padding:70px;display:flex;align-items:center;justify-content:space-between;gap:35px}.contact-panel p{margin:15px 0 0;color:#655b78;max-width:490px}.contact-panel .button{background:#28213e;color:white;border-color:#28213e}
+    footer{border-top:1px solid var(--border);padding:32px 0 45px;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner strong{color:var(--ink)}
+    :focus-visible{outline:3px solid #8466dd;outline-offset:3px}
+    @media(max-width:860px){.hero{grid-template-columns:1fr;gap:25px;padding:70px 0}.hero-art{min-height:380px;max-width:520px;width:100%;margin-inline:auto}.hero h1{max-width:660px}.about-inner{gap:30px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-panel{padding:48px}}
+    @media(max-width:600px){.container{width:min(100% - 32px,1160px)}.announcement{font-size:10px}.nav{min-height:72px;flex-wrap:wrap;padding:15px 0;justify-content:center;gap:15px}.brand{font-size:25px}.mark{width:32px;height:32px}.nav nav{width:100%;justify-content:center;gap:20px}nav a{font-size:12px}.nav-link{padding:6px 12px}.hero{padding:55px 0 65px}.hero h1{font-size:clamp(56px,12vw,73px)}.hero p{font-size:16px}.hero-art{min-height:345px}.art-card{width:255px;padding:18px}.art-shapes{height:140px}.shape-a{width:105px;height:105px}.shape-b{width:100px;height:100px;border-width:17px}.shape-c{width:80px;height:80px}.art-bottom strong{font-size:28px}.orbit{left:0;bottom:6px}.shop,.contact{padding:65px 0}.section-top{display:block}.section-desc{margin-top:14px}.products{grid-template-columns:1fr}.toolbar{display:block}.search{margin-top:15px;width:100%}.about{padding:70px 0}.about-inner{grid-template-columns:1fr;gap:10px}.contact-panel{padding:36px 25px;display:block}.contact-panel .button{margin-top:25px}.footer-inner{display:block}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="announcement">WELCOME TO TERTIARY &nbsp; ✳ &nbsp; AN INDEPENDENT MINI-BUSINESS</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Tertiary homepage"><span class="mark" aria-hidden="true">T</span>Tertiary<span style="color:var(--purple)">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a class="nav-link" href="#contact">Contact ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div>
+          <span class="pill">✦ Welcome to our little corner</span>
+          <h1 id="hero-title">Good things start <em>small.</em></h1>
+          <p>Meet Tertiary, an independent mini-business with big ideas. Discover our products, explore what's new, and follow along as we grow.</p>
+          <div class="actions"><a class="button primary" href="#shop">Explore products <span aria-hidden="true">↗</span></a><a class="button secondary" href="#about">Our story <span aria-hidden="true">→</span></a></div>
+        </div>
+        <div class="hero-art" aria-label="Abstract Tertiary brand illustration">
+          <span class="sparkle" aria-hidden="true">✳</span>
+          <div class="art-card" aria-hidden="true">
+            <div class="art-top"><span>T E R T I A R Y</span><span class="art-circle">✳</span></div>
+            <div class="art-shapes"><span class="shape-a"></span><span class="shape-b"></span><span class="shape-c"></span></div>
+            <div class="art-bottom"><span>SMALL BUSINESS / BIG IDEAS</span><strong>Something<br>different.</strong></div>
+          </div>
+          <div class="orbit" aria-hidden="true">✦ Made to be discovered</div>
+        </div>
+      </section>
+    </div>
+    <section id="shop" class="shop" aria-labelledby="shop-title">
+      <div class="container">
+        <div class="section-top">
+          <div><p class="eyebrow">The collection / 01</p><h2 id="shop-title" class="section-title">Explore the shop<span style="color:var(--purple)">.</span></h2></div>
+          <p class="section-desc">See what Tertiary has to offer. New listings can be added at any time.</p>
+        </div>
+        <div class="toolbar" id="toolbar" hidden>
+          <div class="filters" id="filters" role="group" aria-label="Filter products by category"></div>
+          <label><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search products</span><input class="search" id="search" type="search" placeholder="Search products…" aria-label="Search products"></label>
+        </div>
+        <div id="products" class="products" aria-live="polite"></div>
+        <div id="empty-state" class="empty" hidden><div class="empty-icon" aria-hidden="true">✦</div><h3>Something good is coming.</h3><p>Our online product catalog is being prepared. Check back for updates and new additions!</p></div>
+      </div>
+    </section>
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <div><p class="eyebrow">A little about us / 02</p><h2 id="about-title" class="section-title">Independent by nature.<br>Growing by design.</h2></div>
+        <div><p>Tertiary is a mini-business with room to grow. This website is our home for sharing products, updates, and the things we're working on.</p><p>Whether you're browsing for the first time or coming back to see what's new, we're glad you're here.</p><span class="about-stamp">✳ Thanks for supporting small business</span></div>
+      </div>
+    </section>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel">
+          <div><p class="eyebrow">Stay in touch / 03</p><h2 id="contact-title" class="section-title">Have a question?</h2><p id="contact-copy">Contact details will be added soon. In the meantime, explore the shop above.</p></div>
+          <div id="contact-actions"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><span><strong>Tertiary.</strong> Small business. Big ideas.</span><span>© <span id="year"></span> Tertiary. All rights reserved.</span></div></footer>
+  <script>
+    /* ===============================================================
+       EDIT YOUR BUSINESS DETAILS HERE
+       Add real products to the products array. Example:
+       { name: "Product name", price: "$15", category: "Accessories",
+         description: "A short description", image: "images/item.jpg",
+         buyUrl: "https://your-checkout-link.example", tag: "New" }
+       The image and buyUrl fields are optional. Keep real product,
+       price and payment details here—never API keys or passwords.
+       =============================================================== */
+    const STORE = {
+      contactEmail: "",
+      instagramUrl: "",
+      products: []
+    };
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const productRoot = document.getElementById("products");
+    const emptyState = document.getElementById("empty-state");
+    const toolbar = document.getElementById("toolbar");
+    const filters = document.getElementById("filters");
+    const searchBox = document.getElementById("search");
+    let category = "All";
+
+    function safeUrl(url) {
+      if (!url || typeof url !== "string") return "";
+      try { const resolved = new URL(url, document.baseURI); return ["http:", "https:"].includes(resolved.protocol) ? resolved.href : ""; }
+      catch { return ""; }
+    }
+
+    function renderProducts() {
+      const items = STORE.products.filter(p => (category === "All" || (p.category || "Other") === category) &&
+        (String(p.name || "") + " " + String(p.description || "")).toLowerCase().includes(searchBox.value.trim().toLowerCase()));
+      productRoot.replaceChildren();
+      if (!items.length) {
+        const message = document.createElement("p");
+        message.className = "no-results";
+        message.textContent = "No matching products found. Try another search or category.";
+        productRoot.append(message);
+        return;
+      }
+      items.forEach((p) => {
+        const card = document.createElement("article"); card.className = "product";
+        const media = document.createElement("div"); media.className = "product-media";
+        const image = safeUrl(p.image);
+        if (image) {
+          const img = document.createElement("img"); img.src = image; img.alt = p.name || "Product image"; img.loading = "lazy";
+          img.onerror = () => { img.remove(); const fallback = document.createElement("span"); fallback.className = "product-fallback"; fallback.textContent = "✳"; media.append(fallback); };
+          media.append(img);
+        } else {
+          const fallback = document.createElement("span"); fallback.className = "product-fallback"; fallback.textContent = "✳"; media.append(fallback);
+        }
+        if (p.tag) { const tag = document.createElement("span"); tag.className = "product-tag"; tag.textContent = p.tag; media.append(tag); }
+        const info = document.createElement("div"); info.className = "product-info";
+        const name = document.createElement("h3"); name.textContent = p.name || "Untitled product";
+        const desc = document.createElement("p"); desc.textContent = p.description || p.category || "";
+        const bottom = document.createElement("div"); bottom.className = "product-bottom";
+        const price = document.createElement("span"); price.className = "price"; price.textContent = p.price || "Ask for price";
+        bottom.append(price);
+        const buyLink = safeUrl(p.buyUrl);
+        if (buyLink) {
+          const link = document.createElement("a"); link.href = buyLink; link.textContent = "View / Buy ↗"; link.target = "_blank"; link.rel = "noopener noreferrer"; link.setAttribute("aria-label", "View or buy " + (p.name || "product")); bottom.append(link);
+        } else if (STORE.contactEmail) {
+          const link = document.createElement("a"); link.href = "mailto:" + STORE.contactEmail + "?subject=" + encodeURIComponent("Question about " + (p.name || "a product")); link.textContent = "Ask about it ↗"; bottom.append(link);
+        }
+        info.append(name, desc, bottom); card.append(media, info); productRoot.append(card);
+      });
+    }
+
+    function renderFilters() {
+      const categories = ["All", ...new Set(STORE.products.map(p => p.category || "Other"))];
+      filters.replaceChildren();
+      categories.forEach(c => {
+        const button = document.createElement("button"); button.type = "button"; button.className = "filter"; button.textContent = c;
+        button.setAttribute("aria-pressed", String(c === category));
+        button.addEventListener("click", () => { category = c; renderFilters(); renderProducts(); });
+        filters.append(button);
+      });
+    }
+
+    if (STORE.products.length > 0) {
+      emptyState.hidden = true; toolbar.hidden = false; renderFilters(); renderProducts();
+      searchBox.addEventListener("input", renderProducts);
+    } else {
+      emptyState.hidden = false; productRoot.hidden = true; toolbar.hidden = true;
+    }
+
+    const actions = document.getElementById("contact-actions");
+    const contactCopy = document.getElementById("contact-copy");
+    if (STORE.contactEmail) {
+      contactCopy.textContent = "Questions, orders, or collaborations? We'd love to hear from you.";
+      const link = document.createElement("a"); link.className = "button"; link.textContent = "Send an email ↗"; link.href = "mailto:" + STORE.contactEmail; actions.append(link);
+    } else if (safeUrl(STORE.instagramUrl)) {
+      contactCopy.textContent = "Questions, orders, or collaborations? Reach out on Instagram.";
+    }
+    if (safeUrl(STORE.instagramUrl)) {
+      const link = document.createElement("a"); link.className = "button"; link.textContent = "Instagram ↗"; link.href = safeUrl(STORE.instagramUrl); link.target = "_blank"; link.rel = "noopener noreferrer"; actions.append(link);
+    }
+  </script>
+</body>
+</html>
