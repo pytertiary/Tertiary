@@ -337,13 +337,88 @@
     .refund-link:hover{color:var(--white);border-color:var(--silver)}
     .footer-copy .footer-refunds{display:inline-block;color:var(--silver);font:600 13px/1.6 Arial,Helvetica,sans-serif;letter-spacing:0;text-transform:none;margin-bottom:6px;transition:color .2s}
     .footer-copy .footer-refunds:hover{color:var(--red)}
+
+    /* Permanent navigation, aligned top-left while keeping the T3 toggle on the right. */
+    .header-inner{gap:clamp(16px,3vw,44px)}
+    .site-nav{
+      display:flex;align-items:center;gap:clamp(13px,1.8vw,29px);
+      min-width:0;flex:1;white-space:nowrap;
+    }
+    .site-nav a{
+      flex:0 0 auto;position:relative;
+      padding:13px 0;font:600 13px/1.3 Arial,Helvetica,sans-serif;
+      letter-spacing:0;color:var(--silver);
+      transition:color .2s ease;
+    }
+    .site-nav a::after{
+      content:"";position:absolute;bottom:6px;left:0;right:100%;
+      height:1px;background:var(--red);transition:right .22s ease;
+    }
+    .site-nav a:hover,.site-nav a:focus-visible{color:var(--white)}
+    .site-nav a:hover::after,.site-nav a:focus-visible::after,.site-nav a[aria-current="page"]::after{right:0}
+    .header-right{flex:0 0 auto;gap:clamp(13px,2.1vw,30px)}
+    #top,#about,#pyt,#support{scroll-margin-top:110px}
+    /* Remove the tracking highlight from the PT3 information panel only. */
+    .technical-panel::before{display:none}
+    .technical-panel,.technical-panel:hover{border-color:var(--line-strong)}
+    .technical-panel{transition:none}
+    /* Consistent regular sans-serif platform badges, no typewriter/monospace face. */
+    .os-list span{
+      font:600 13px/1.35 Arial,Helvetica,sans-serif;
+      letter-spacing:0;text-transform:none;padding:11px 16px;
+    }
+    /* No B/U gutters in the pricing table. */
+    .tier{grid-template-columns:minmax(0,1fr) auto;gap:18px}
+    .tier-name{min-width:0;overflow-wrap:anywhere}
+    @media(max-width:960px){
+      .header-inner{gap:12px}
+      .site-nav{gap:clamp(11px,1.6vw,20px)}
+      .site-nav a{font-size:12px}
+      .header-right{gap:14px}
+      .brand-toggle{font-size:20px;min-width:108px}
+      .header-link{font-size:10px}
+    }
+    @media(max-width:780px){
+      .header-inner{
+        display:grid;grid-template-columns:minmax(0,1fr);
+        gap:1px;min-height:0;padding:9px 0 7px;
+      }
+      .site-nav{
+        width:100%;max-width:100%;min-width:0;
+        gap:clamp(8px,2.5vw,17px);
+        overflow-x:auto;overscroll-behavior-x:contain;
+        scrollbar-width:thin;scrollbar-color:#555 #111;
+      }
+      .site-nav a{font-size:12px;padding:10px 0 13px}
+      .site-nav a::after{bottom:7px}
+      .header-right{
+        width:100%;display:flex;align-items:center;
+        justify-content:space-between;gap:12px;
+      }
+      .nav-preview{left:0;right:auto;width:min(340px,calc(100vw - 36px))}
+      .brand-toggle{font-size:19px;min-width:103px}
+      .hero{min-height:calc(100svh - 118px)}
+      #top,#about,#pyt,#support{scroll-margin-top:135px}
+    }
+    @media(max-width:450px){
+      .site-nav{gap:clamp(8px,2vw,11px)}
+      .site-nav a{font-size:11px}
+      .header-link{font-size:11px}
+      .tier{gap:12px}
+    }
   </style>
 </head>
 <body>
   <div class="top-line" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
-      <div class="header-index"><span class="slash">/</span> Tertiary</div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#top" aria-current="page">Home</a>
+        <a href="#about">About</a>
+        <a href="#pyt">Pricing</a>
+        <a href="#support">Support</a>
+        <a href="./refunds.html">Refund Policy</a>
+      </nav>
       <div class="header-right">
         <div class="nav-download">
           <a class="header-link" href="#pyt" aria-label="Download PyTertiary information">Download PyTertiary <span class="down" aria-hidden="true">↘</span></a>
@@ -383,7 +458,7 @@
       </div>
       <div class="hero-edge" aria-hidden="true"></div>
     </section>
-    <section class="intro-band" aria-label="About Tertiary and featured software">
+    <section class="intro-band" id="about" aria-label="About Tertiary and featured software">
       <div class="wrap intro-grid">
         <div class="intro-copy reveal">
           <div class="vertical-rule">
@@ -391,7 +466,7 @@
             <p class="hero-about">Tertiary is a mono ran "business" which offers paid software to circumnavigate limitations automatically.</p>
           </div>
         </div>
-        <div class="technical-panel reveal" data-glow>
+        <div class="technical-panel reveal">
           <div class="panel-head"><span class="panel-label">PyTertiary</span><span class="panel-diamond" aria-hidden="true"></span></div>
           <div class="pt3-media" id="pt3-media">
             <img src="PT3LogoBig.png" id="pt3-logo" alt="PyTertiary (PT3) logo" loading="lazy" decoding="async">
@@ -421,8 +496,8 @@
           </div>
           <div class="market reveal" data-glow>
             <div class="market-header"><span>PyTertiary pricing</span><span>USD</span></div>
-            <div class="tier"><span class="tier-number">B</span><span class="tier-name">Basic · 30 days</span><span class="amount">$5</span></div>
-            <div class="tier"><span class="tier-number">U</span><span class="tier-name">Ultra · 300 days</span><span class="amount">$45</span></div>
+            <div class="tier"><span class="tier-name">Basic · 30 days</span><span class="amount">$5</span></div>
+            <div class="tier"><span class="tier-name">Ultra · 300 days</span><span class="amount">$45</span></div>
             <div class="market-footer">
               <a class="action-link" href="https://cash.app/$pytertiary" target="_blank" rel="noopener noreferrer"><span>Cash App / $pytertiary</span><span aria-hidden="true">↗</span></a>
               <button class="action-link" type="button" data-copy="$pytertiary"><span>Copy Cash App handle</span><span aria-hidden="true">↗</span></button>
