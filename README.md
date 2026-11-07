@@ -1,35 +1,34 @@
-# Tertiary3
+# Tertiary3 — website
 
-A custom, single-file website for Tertiary3 and **PyTertiary (PT3)**.
+A custom single-file website for Tertiary3 and **PyTertiary (PT3)**, built with HTML, bespoke CSS, and vanilla JavaScript.
 
-- [Live GitHub Pages URL](https://pytertiary.github.io/Tertiary/) (requires Pages to be enabled)
-- [Edit the website](https://github.com/pytertiary/Tertiary/edit/main/index.html)
-- [GitHub Pages settings](https://github.com/pytertiary/Tertiary/settings/pages)
+- **Website:** https://pytertiary.github.io/Tertiary/ (GitHub Pages must be enabled)
+- **Edit page:** https://github.com/pytertiary/Tertiary/edit/main/index.html
+- **Pages settings:** https://github.com/pytertiary/Tertiary/settings/pages
 
 ## Publish
 
-In **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, and save. GitHub Pages will publish `index.html` automatically.
+Go to **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/(root)**, then save.
 
-## Design
+## Appearance & interactions
 
-The website is built entirely in one `index.html` file with bespoke CSS and vanilla JavaScript. Its palette uses **#d12a2a** (red), **#18181b** (gray), **#262626** (lighter gray), **#fff** and **#e0e0e0** (white and silver). The header wordmark toggles between **Tertiary3** and **T3**. Hover or keyboard-focus **Download PyTertiary** to see the About PT3 panel. The page includes a PT3 product information section, $5 and $45 options, the Cash App handle **$pytertiary**, and Discord username **pytertiary**.
+- Full-height landing screen with **Tertiary3** and the headings **Bypass. Exploit. Abuse.**
+- Click or keyboard-activate each heading to toggle an inline definition.
+- Top-right wordmark toggles between **Tertiary3** and **T3**.
+- Hover or keyboard-focus **Download PyTertiary** to open the About PT3 menu.
+- Responsive breakpoints and reduced-motion behavior.
+- Animations include entrance reveals, interactive heading underlines, subtle logo glow and scroll reveals.
+- Colors: red **#d12a2a**, dark gray **#18181b**, lighter gray **#262626**, white **#fff**, silver **#e0e0e0**.
+- Software details, PT3 logo and pricing appear below the landing screen.
 
-## Setting up a real download
+## Logo
 
-No installer or direct download URL was supplied. The "Download PyTertiary" navigation currently links to the PT3 product/purchase section, **not to an installer**.
+The PT3 logo is loaded from **`PT3LogoBig.png`** at the repository root, next to **`index.html`**. If the logo is unavailable, the page displays a fallback PT3 text mark.
 
-When you have a published release or download page:
+## Download and purchasing
 
-1. Open `index.html`.
-2. Edit the header's `href="#pyt"` to link to your real download destination, or add a separate download button next to the pricing options.
-3. Verify your links, platform compatibility, prices and purchasing instructions before publishing.
-4. Keep all customer details, payment secrets and credentials **out of this public repository**.
+The **Download PyTertiary** navigation item currently scrolls to product information because no direct installer URL has been provided. The two listed prices are **$5** and **$45**. The page directs visitors to Cash App **$pytertiary** and Discord username **pytertiary**. Confirm purchase and delivery terms before making payments.
 
-GitHub Pages serves static files only; payments and license delivery must be handled through a separate trusted process.
+To add a real installer/release link, edit `index.html` and update the header anchor to a verified download URL, or add a separate download link. Avoid storing secrets, private customer details or sensitive payment information in this public repository.
 
-## Contacts
-
-- Cash App: **$pytertiary**
-- Discord: **pytertiary**
-
-The page has accessible focus behavior and reduced-motion support, and does not load third-party JavaScript libraries.
+GitHub Pages serves static content; it does not process payments or manage licenses on its own.
