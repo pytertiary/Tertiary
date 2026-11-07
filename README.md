@@ -1,62 +1,35 @@
-# Tertiary — Business Website
+# Tertiary3
 
-A lightweight, mobile-friendly storefront for **Tertiary**, hosted with GitHub Pages. No build tools, dependencies, server or paid hosting required.
+A custom, single-file website for Tertiary3 and **PyTertiary (PT3)**.
 
-## Publish on GitHub Pages
+- [Live GitHub Pages URL](https://pytertiary.github.io/Tertiary/) (requires Pages to be enabled)
+- [Edit the website](https://github.com/pytertiary/Tertiary/edit/main/index.html)
+- [GitHub Pages settings](https://github.com/pytertiary/Tertiary/settings/pages)
 
-1. Open [this repository's Pages settings](https://github.com/pytertiary/Tertiary/settings/pages).
-2. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-3. Choose **main** and **/(root)**, then select **Save**.
-4. Your site should be available at **https://pytertiary.github.io/Tertiary/** after GitHub finishes publishing.
+## Publish
 
-> The repository contains the site files, but GitHub Pages still needs to be enabled in Settings.
+In **Settings → Pages**, choose **Deploy from a branch**, select **main** and **/(root)**, and save. GitHub Pages will publish `index.html` automatically.
 
-## Customize your storefront
+## Design
 
-Open [index.html](https://github.com/pytertiary/Tertiary/blob/main/index.html), click the pencil icon to edit, then scroll to the `STORE` object near the bottom. Replace the empty values with your actual business details.
+The website is built entirely in one `index.html` file with bespoke CSS and vanilla JavaScript. Its palette uses **#d12a2a** (red), **#18181b** (gray), **#262626** (lighter gray), **#fff** and **#e0e0e0** (white and silver). The header wordmark toggles between **Tertiary3** and **T3**. Hover or keyboard-focus **Download PyTertiary** to see the About PT3 panel. The page includes a PT3 product information section, $5 and $45 options, the Cash App handle **$pytertiary**, and Discord username **pytertiary**.
 
-```js
-const STORE = {
-  contactEmail: "you@example.com",             // replace with your real business email
-  instagramUrl: "https://instagram.com/YOURNAME", // optional
-  products: [
-    {
-      name: "Your product name",
-      price: "$15",
-      category: "Accessories",
-      description: "Describe the product here.",
-      image: "images/your-photo.jpg",            // optional
-      buyUrl: "https://your-real-checkout-link", // optional
-      tag: "New"                                 // optional
-    }
-  ]
-};
-```
+## Setting up a real download
 
-**The example values above are placeholders.** Only publish genuine product descriptions, prices and checkout links.
+No installer or direct download URL was supplied. The "Download PyTertiary" navigation currently links to the PT3 product/purchase section, **not to an installer**.
 
-Each product is automatically shown in the catalog, and customers can search by name or description and filter by category. If you omit a product's image, a graphic placeholder appears. If you omit `buyUrl`, a customer can ask about the product by email if you've added `contactEmail`. Products with neither a checkout link nor a contact email will show no ordering link.
+When you have a published release or download page:
 
-### Adding product images
+1. Open `index.html`.
+2. Edit the header's `href="#pyt"` to link to your real download destination, or add a separate download button next to the pricing options.
+3. Verify your links, platform compatibility, prices and purchasing instructions before publishing.
+4. Keep all customer details, payment secrets and credentials **out of this public repository**.
 
-Inside the repository, create a folder named `images` and upload your photos. Refer to them from your product entries as `images/filename.jpg`. Photos work best when they're clear, square or landscape-oriented, and compressed for the web.
+GitHub Pages serves static files only; payments and license delivery must be handled through a separate trusted process.
 
-### Editing the text, colors and layout
+## Contacts
 
-The HTML, CSS and JavaScript all live in `index.html`. Edit the heading and text directly. The main color palette is defined near the top inside the `:root` CSS rule. This site works without any external framework.
+- Cash App: **$pytertiary**
+- Discord: **pytertiary**
 
-## A note about payments
-
-GitHub Pages only hosts **static websites**. It cannot securely process payments or store private customer/order data on its own. To take payments, point each `buyUrl` to a trusted external checkout service you set up. **Never put passwords, API secrets or private customer data in this public repository.**
-
-## What's included
-
-- Responsive home, product catalog, about and contact sections
-- Search and category filters when products are available
-- Image placeholders, optional product photos and external checkout links
-- Contact-by-email and optional Instagram link
-- Accessible navigation, reduced-motion support, no third-party tracking scripts
-
----
-
-Made for Tertiary ✳
+The page has accessible focus behavior and reduced-motion support, and does not load third-party JavaScript libraries.
