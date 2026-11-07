@@ -25,6 +25,19 @@ Go to **Settings → Pages**, select **Deploy from a branch**, choose **main** a
 
 The PT3 logo is loaded from **`PT3LogoBig.png`** at the repository root, next to **`index.html`**. If the logo is unavailable, the page displays a fallback PT3 text mark.
 
+
+## Refund policy
+
+The standalone [refund policy](refunds.html) is linked from the pricing section and footer.
+
+- **Basic key:** $5, 30 days. Unused keys: full refund within 14 days of purchase. Used keys: full refund within 3 days of purchase, provided usage was **less than 45 minutes**.
+- **Ultra key:** $45, 300 days. Unused keys: full refund within 30 days of purchase. Used keys: full refund within **72 hours of purchase**, provided usage was **less than 30 minutes**.
+- If a payment was sent without the app-generated **12-character alphanumeric key** (from **I don't have a key**), contact official support immediately. Provide the amount sent, payment time and relevant account/transaction details.
+- Official Discord: https://discord.gg/wS7GHzEj3N
+- Official Discord support username: **pytertiary**
+
+You can edit the refund policy by editing [refunds.html](refunds.html). Keep `index.html` pricing and policy text consistent whenever the terms change.
+
 ## Download and purchasing
 
 The **Download PyTertiary** navigation item currently scrolls to product information because no direct installer URL has been provided. The two listed prices are **$5** and **$45**. The page directs visitors to Cash App **$pytertiary** and Discord username **pytertiary**. Confirm purchase and delivery terms before making payments.
