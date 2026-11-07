@@ -332,6 +332,11 @@
       .hero-logo,.manifesto .manifesto-line,.pt3-media img{animation:none!important}
       .manifesto .definition{transition:none!important}
     }
+
+    .refund-link{display:inline-flex;justify-content:space-between;gap:15px;align-items:center;padding:12px 0;border-bottom:1px solid var(--red);color:var(--silver);font-weight:700;font-size:13px;letter-spacing:.01em;transition:color .2s,border-color .2s}
+    .refund-link:hover{color:var(--white);border-color:var(--silver)}
+    .footer-copy .footer-refunds{display:inline-block;color:var(--silver);font:600 13px/1.6 Arial,Helvetica,sans-serif;letter-spacing:0;text-transform:none;margin-bottom:6px;transition:color .2s}
+    .footer-copy .footer-refunds:hover{color:var(--red)}
   </style>
 </head>
 <body>
@@ -416,12 +421,13 @@
           </div>
           <div class="market reveal" data-glow>
             <div class="market-header"><span>PyTertiary pricing</span><span>USD</span></div>
-            <div class="tier"><span class="tier-number">01 /</span><span class="tier-name">Option 01</span><span class="amount">$5</span></div>
-            <div class="tier"><span class="tier-number">02 /</span><span class="tier-name">Option 02</span><span class="amount">$45</span></div>
+            <div class="tier"><span class="tier-number">B</span><span class="tier-name">Basic · 30 days</span><span class="amount">$5</span></div>
+            <div class="tier"><span class="tier-number">U</span><span class="tier-name">Ultra · 300 days</span><span class="amount">$45</span></div>
             <div class="market-footer">
               <a class="action-link" href="https://cash.app/$pytertiary" target="_blank" rel="noopener noreferrer"><span>Cash App / $pytertiary</span><span aria-hidden="true">↗</span></a>
               <button class="action-link" type="button" data-copy="$pytertiary"><span>Copy Cash App handle</span><span aria-hidden="true">↗</span></button>
-              <p class="small-note">These are the prices provided for PT3. Package differences and a download URL are not listed yet; check on Discord before paying.</p>
+              <p class="small-note">Attach the 12-character alphanumeric key from the app when paying. A direct installer URL has not been provided yet; contact support for purchase instructions.</p>
+              <a class="refund-link" href="./refunds.html">View refund policy <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
@@ -440,7 +446,7 @@
   </main>
   <footer class="wrap site-footer">
     <a class="footer-logo" href="#top"><span class="red">Tertiary</span>3</a>
-    <div class="footer-copy">© <span id="year"></span> TERTIARY3<br>INDEPENDENT SOFTWARE / PT3</div>
+    <div class="footer-copy"><a class="footer-refunds" href="./refunds.html">Refund policy ↗</a><br>© <span id="year"></span> TERTIARY3<br>INDEPENDENT SOFTWARE / PT3</div>
   </footer>
   <div id="status" class="status" role="status" aria-live="polite"></div>
   <script>
